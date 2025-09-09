@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --cor0: #013564;
+    --cor1: #BB491E;
+    --cor2: #F39C12;
+    --cor3: #333333;
+    --cor4: #F4F7F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--cor4);
+    color: var(--cor3);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(to top, var(--cor1), var(--cor0));
+    color: white;
+    padding: 40px;
+}
+
+header h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+header h1 img {
+    height: 100px;
+}
+
+header p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+nav {
+    background-color: var(--cor1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;    
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+nav a:not(#logo-uniube):hover {
+    background-color: var(--cor0);
+    color: var(--cor4);
+}
+
+nav #logo-uniube {
+    background-color: white;
+}
+
+nav #logo-uniube:hover {
+    background-color: var(--cor0);
+}
+
+nav #logo-uniube img {
+    height: 1.5em;
+    width: auto;
+}
+
+nav #logo-uniube:hover img {
+    content: url('../imagens/logoUniubeBranca.png');
+}
+
+main {
+    min-width: 300px;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.titulo_artigo {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin: 20px 0;
+    background-color: var(--cor1);
+    text-indent: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.texto_artigo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.conteudo_texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    min-width: 300px;
+    font-size: 1.3em;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+.conteudo_texto > h2 {
+    font-size: 1.3em;
+}
+
+.conteudo_texto > ul {
+    list-style-position: inside;
+}
+
+.texto_artigo img {
+    flex: 1;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.video {
+    background-color: var(--cor0);
+    margin: 0 -5px 30px -5px;
+    padding: 20px;
+    padding-bottom: 56.50%;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor0);
+    color: white;
+    padding: 35px;
+    border-radius: 8px;
+    max-width: 1200px;
+    text-indent: 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+}
+
+aside > h3 {
+    background-color: var(--cor1);
+    color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    margin: -35px -35px 0 -35px;
+}
+
+aside > p {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+aside > ul {
+    padding-top: 15px;
+    list-style-type: '\1F5F2\0020\0020';
+    list-style-position: inside;
+}
+
+aside > ul > li::marker {
+    color: var(--cor2);
+}
+
+aside > ul > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+aside > ul > li > a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 20px 0;
+    background-color: var(--cor1);
+    text-indent: 8px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.texto_conclusao {
+    padding: 20px;
+    font-size: 1.2em;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+table {
+    width: 100%;
+    padding: 10px;
+}
+
+table caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--cor3);
+}
+
+table th {
+    background-color: var(--cor1);
+    color: white;
+    border: 1px solid var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table td {
+    color: white;
+    background-color: var(--cor0);
+    border: 1px solid var(--cor0);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--cor3);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 7px 0px 7px rgba(0, 0, 0, 0.5);
+}
