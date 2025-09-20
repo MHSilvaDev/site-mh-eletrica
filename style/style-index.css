@@ -79,17 +79,13 @@ nav a:not(#logo-uniube):hover {
     color: var(--cor4);
 }
 
-nav #logo-uniube {
-    background-color: white;
-}
-
-nav #logo-uniube:hover {
-    background-color: var(--cor0);
-}
-
 nav #logo-uniube img {
     height: 1.5em;
     width: auto;
+}
+
+nav #logo-uniube:hover img {
+    content: url('../imagens/logoUniube.png');
 }
 
 main {
@@ -198,6 +194,16 @@ footer {
     }
     header p {
         font-size: 1rem;
+    }
+       
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        width: 90%;
+        justify-content: center;
     }
 
     main {
