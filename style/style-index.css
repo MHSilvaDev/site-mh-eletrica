@@ -13,26 +13,27 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     background-color: var(--cor4);
     color: var(--cor3);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 header {
     background: linear-gradient(to top, var(--cor1), var(--cor0));
     color: white;
     padding: 40px;
+    text-align: center;
 }
 
 header h1 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
-    font-style: normal;
     font-size: 5rem;
     display: flex;
     justify-content: center;
@@ -46,19 +47,14 @@ header h1 img {
 
 header p {
     font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+    font-size: 1.2em;
+    margin-top: 10px;
 }
-
 
 nav {
     background-color: var(--cor1);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -96,83 +92,92 @@ nav #logo-uniube img {
     width: auto;
 }
 
-nav #logo-uniube:hover img {
-    content: url('../imagens/logoUniubeBranca.png');
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-main article {
+.apresentacao {
     display: flex;
     align-items: center;
     gap: 30px;
-    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
-.texto_artigo {
+.texto-apresentacao {
     flex: 1;
-    min-width: 300px;
     font-size: 1.2em;
-    text-indent: 30px;
     text-align: justify;
 }
 
-main article img {
-    flex: 2;
-    max-width: 100%;
-    height: auto;
-    min-width: 300px;
+.texto-apresentacao p {
+    text-indent: 20px;
+    margin-bottom: 15px;
 }
 
-main {
-    min-width: 300px;
-    max-width: 1200px;
-    margin: auto;
-    margin-bottom: 30px;
-    padding: 20px;
+.apresentacao img {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
 }
 
 aside {
     background-color: var(--cor0);
     color: white;
-    padding: 15px;
-    border-radius: 10px;
-    max-width: 1200px;
-    text-indent: 8px;
+    padding: 35px;
+    border-radius: 8px;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-    text-align: justify;
+    margin-top: 30px;
 }
 
 aside h3 {
     background-color: var(--cor1);
     color: white;
-    border-radius: 10px 10px 0 0;
-    padding: 15px;
-    margin: -15px -15px 0 -15px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    border-radius: 8px 8px 0 0;
+    padding: 10px;
+    margin: -35px -35px 15px -35px;
+    text-align: center;
 }
 
-aside > ul {
-    padding-top: 15px;
-    list-style-type: '\1F5F2\0020\0020';
-    list-style-position: inside;
+aside ul {
+    list-style: none;
+    padding: 0;
 }
 
-aside > ul > li::marker {
-    color: var(--cor2);
+aside ul li {
+    margin-bottom: 15px;
+    border-left: 3px solid var(--cor2);
+    padding-left: 15px;
 }
 
-aside > ul > li > a {
+aside ul li a {
     text-decoration: none;
     color: white;
+    font-weight: bold;
 }
 
-aside > ul > li > a:hover {
+aside ul li a:hover {
     text-decoration: underline;
+}
+
+aside ul li p {
+    margin-top: 5px;
 }
 
 .texto_convite {
     padding: 20px;
     font-size: 1.2em;
-    text-indent: 30px;
-    text-align: justify;
+    text-align: center;
+    font-weight: bold;
+    color: var(--cor0);
 }
 
 footer {
@@ -180,5 +185,40 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    box-shadow: 7px 0px 7px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+        flex-direction: column;
+    }
+    header h1 img {
+        height: 60px;
+    }
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .apresentacao {
+        flex-direction: column;
+    }
+
+    .apresentacao img {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    
+    aside {
+        padding: 20px;
+    }
+
+    aside h3 {
+        margin: -20px -20px 15px -20px;
+    }
 }
